@@ -1,5 +1,5 @@
 # php_stripe_checkout_integration
-The following PHP code snippet shows a simple checkout session using stripe. 
+The following PHP code snippet shows a simple checkout session using Stripe. Please find your stripe secret key from your developer account inside the `API keys` section.
 
 #### Install stripe with composer.
 ```
@@ -23,7 +23,7 @@ public function checkout()
   require_once 'vendor/autoload.php';
   
   // the stripe client
-  $stripe = new \Stripe\StripeClient("YOUR_STRIPE_SECRET_GOES_HERE");
+  $stripe = new \Stripe\StripeClient("YOUR_STRIPE_SECRET_KEY");
   
   // create a sripe customer
   $stripe_customer = $stripe->customers->create([
