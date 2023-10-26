@@ -1,24 +1,12 @@
 # php_stripe_checkout_integration
-Integrate Stripe checkout code example
+The following PHP code snippet shows a simple checkout session using stripe. 
 
-### The composer file
+#### Install stripe with composer.
 ```
-{
-  "require-dev": {
-  },
-  "autoload": {
-    "classmap": [
-    ],
-    "files": [
-    ]
-  },
-  "require": {
-    "stripe/stripe-php": "^10.6"
-  }
-}
+composer require stripe/stripe-php
 ```
 
-### Code snippet (Make adjustment to your needs)
+#### Code snippet (Make adjustment to your needs)
 The following code is a basic example of stripe checkout.
 
 ```
