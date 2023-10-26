@@ -10,8 +10,7 @@ composer require stripe/stripe-php
 The following code is a basic example of stripe checkout.
 
 ```
-public function checkout()
-{
+public function checkout() {
   // receives a post request 
   $ocr_num = $_POST['ocr_num'];
   
@@ -57,14 +56,12 @@ public function checkout()
   header("Location: " . $checkout->url);
 }
 
-public function success($checkout_session)
-{
+public function success($checkout_session) {
   // find out the invoice by this checkout session
   // and set it paid.
 }
 
-public funciton cancel($checkout_session)
-{
+public funciton cancel($checkout_session) {
   // find out the invoice by this checkout session
   // and set it canceled.
 }
