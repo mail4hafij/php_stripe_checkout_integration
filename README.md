@@ -54,7 +54,7 @@ public function checkout()
   
   header('Content-Type: application/json');
   header("HTTP/1.1 303 See Other");
-  header("Location: " . $checkout_session->url);
+  header("Location: " . $checkout->url);
 }
 
 public function success($checkout_session)
