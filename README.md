@@ -16,7 +16,7 @@ public function checkout() {
   $ocr_num = $_POST['ocr_num'];
 
   // Maintain a unique session and save it in the database.
-  // Usually, the first step is to get the invoice with the given ocr_num and
+  // Usually, the first step is to get the invoice with the given ocr_num
   // then update the invoice with the following checkout_session.
   // So that after a successful checkout we can find out the invoice with
   // the given checkout session.
