@@ -11,11 +11,15 @@ The following code is a basic example of stripe checkout.
 
 ```
 public function checkout() {
-  // receives a post request 
+  // receives a post request
+  // in real life - requires post validation
   $ocr_num = $_POST['ocr_num'];
-  
-  // maintain a unique session and save it in the database
-  // so that after successful checkout we can find out the session.
+
+  // Maintain a unique session and save it in the database.
+  // Usually, the first step is to get the invoice with the given ocr_num and
+  // then update the invoice with the following checkout_session.
+  // So that after a successful checkout we can find out the invoice with
+  // the given checkout session.
   $checkout_session = md5(uniqid(rand(), true));
 
   // auto loading the required stripe classes
